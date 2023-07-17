@@ -11,28 +11,29 @@ var scores = [60, 50, 60, 58, 54, 54,
               .21, .25, .25, .25, .28, .25, .24, .22,
               .20, .25, .30, .25, .24, .25, .25, .25, 
               .27, .25, .26, .29];
-    //Bubble solution e.g #0 score: 60, #1 score: 50, #2 score: 60//
-    //Total number of bubble scores = 36//
-    //Highest number of bubble score = 69//
-    //Bubble solutions highest score #11 & #18//
+    //Bubble solution e.g #0 score: 60, #1 score: 50, #2 score: 60
+    //Total number of bubble scores = 36
+    //Highest number of bubble score = 69
+    //Bubble solutions highest score #11 & #18
     
     var highScore, bestSolutions;
+    //Declares two varaibles named highScore and bestSolutions
 
  
-    highScore = printAndGetHighScore(scores);
-    console.log("Bubbles tests: " + scores.length);
-    console.log("Highest bubble score: " + highScore);
+    highScore = printAndGetHighScore(scores);    //Calling function printAndGetHighSCore with parameters scores and assigns returned avlue to the highScore variable
+    console.log("Bubbles tests: " + scores.length);  //Prints the number (length) of elements in the scores array (36) with string "Bubble tests" before
+    console.log("Highest bubble score: " + highScore);  //Prints highest number of bubble score plus value of highScore (69)
     
   
-    bestSolutions = getBestResults(scores, highScore);
-    console.log("Solutions with the highest score: " + bestSolutions);
+    bestSolutions = getBestResults(scores, highScore);   //Calls getBestResults function with parameters scores and highScore and assigns returned value to besSolution varaiable
+    console.log("Solutions with the highest score: " + bestSolutions);  //Prints value of besSolutions with string (11,18)
     
-    mostCostEffective = getMostCostEffectiveSolution(scores, costs, highScore);
+    mostCostEffective = getMostCostEffectiveSolution(scores, costs, highScore);  //Calls function parameters scores, costs and highScore and assigns returned value to mostCostEffective
     
     
-    console.log("Bubble Solution #" + mostCostEffective + " is the most cost effective");
+    console.log("Bubble Solution #" + mostCostEffective + " is the most cost effective");  //Prints most codt effective solution (#11)
     
-    function printAndGetHighScore(scores) {
+    function printAndGetHighScore(scores) { 
         var highScore = 0;
         var output;
         for (var i = 0; i < scores.length; i++) {
